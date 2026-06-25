@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stream-scan"
+version = "0.1.0"
+description = "Real-time prompt safety scanner for LLMs"
+readme = "README.md"
+authors = [{name = "devops2626", email = "devops26@icloud.com"}]
+license = {text = "MIT"}
+dependencies = [
+    "click>=8.0",
+    "google-generativeai>=0.3.0",
+    "python-dotenv>=1.0",
+]
+[project.scripts]
+stream-scan = "stream_scan.cli:cli"
